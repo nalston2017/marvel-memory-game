@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Amazing Spider-man",
+    "image": "./images/Amazing_Spider-Man.jpg",
+    "selected": false
+  },
+  {
+    "id": 2,
+    "name": "Apocalypse",
+    "image": "./images/Apocalypse.jpg",
+    "selected": false
+  },
+  {
+    "id": 3,
+    "name": "Augustus Roman",
+    "image": "./images/Augustus_Roman.jpg",
+    "selected": false
+  },
+  {
+    "id": 4,
+    "name": "Black Panther",
+    "image": "./images/Black_Panther.jpg",
+    "selected": false
+  },
+  {
+    "id": 5,
+    "name": "Captain Marvel",
+    "image": "./images/Captain_Marvel.jpg",
+    "selected": false
+  },
+  {
+    "id": 6,
+    "name": "Cyclops",
+    "image": "./images/Cyclops.jpg",
+    "selected": false
+  },
+  {
+    "id": 7,
+    "name": "Madelyne Pryor",
+    "image": "./images/Madelyne_Pryor.jpg",
+    "selected": false
+  },
+  {
+    "id": 8,
+    "name": "Mary Jane Watson",
+    "image": "./images/Mary_Jane_Watson.jpg",
+    "selected": false
+  },
+  {
+    "id": 9,
+    "name": "Nova",
+    "image": "./images/Nova.jpg",
+    "selected": false
+  },
+  {
+    "id": 9,
+    "name": "Reed Richards",
+    "image": "./images/Reed_Richards.jpg",
+    "selected": false
+  },
+  {
+    "id": 10,
+    "name": "Runaways",
+    "image": "./images/Runaways.jpg",
+    "selected": false
+  },
+  {
+    "id": 11,
+    "name": "She-Hulk",
+    "image": "./images/She-Hulk.jpg",
+    "selected": false
+  },
+  {
+    "id": 12,
+    "name": "Star-Lord",
+    "image": "./images/Star-Lord.jpg",
+    "selected": false
+  },
+  {
+    "id": 13,
+    "name": "Thanos",
+    "image": "./images/Thanos.jpg",
+    "selected": false
+  },
+  {
+    "id": 14,
+    "name": "Thanos",
+    "image": "./images/Thanos.jpg",
+    "selected": false
+  },
+  {
+    "id": 15,
+    "name": "Wolverine",
+    "image": "./images/Wolverine.jpg",
+    "selected": false
+  }
+]
