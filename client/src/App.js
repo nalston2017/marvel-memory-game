@@ -1,40 +1,57 @@
-import React, {Component} from "react";
-import "./App.css";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Characters from "./components/Characters";
-import Scores from "./components/Scores";
-import marvels from "./marvels.json"
+import React, {Component} from 'react';
+import './App.css';
+import Header from './components/Header';
+import Scores from './components/Scores';
+import Tile from './components/Tile';
+import Footer from './components/Footer';
+import marvels from './marvels.json';
 
 class App extends Component {
+  // Set the state to start the game
   state = {
-    currentScore: 0,
     topScore: 0,
-    message: 'Click your favorite character to start.',
-    marvels: marvels
+    currentScore: 0,
+    marvels: marvels,
+    selected: false,
+    message: "Click on your favorite character to get started. Remember who you picked."
   };
 
-  counterCheck=(name,selectedState) => {
-    let marvelArray = this.state.marvels;
-    marvelArray.sort(function(a, b) {
-      return 0.5 - Math.random()
-    });
+  // Shuffle function
+  // Source: https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
+  shuffle = a => {
+    for (let i = a.length - 1; i > 0; i--) {
+      let j = Math.floor(Math.random() * (i + 1));
+      [
+        a[i], a[j]
+      ] = [
+        a[j], a[i]
+      ];
+    }
+  }
 
-    if (selectedState) {
-      marvelArray.forEach(marvel => marvel.selected = false);
-      this.setState({marvel: marvelArray, currentScore: 0})
+  //Onclick logic
+  clickTile = id =>{
+    const matchTile = this.state.selected.find(i => i.id === id);
+
+    if (matchTile === true) {
+      this.setState({
+        topScore: (this.state.currentScore > this.state.topScore)
+          ? this.state.currectScore
+          : this.state.topScore,
+        currentScore: 0,
+        marvels: marvels,
+        selected: false,
+        message: "You have already picked that.Try again."
+      });
     } else {
-      marvelArray.forEach((marvel) => {
-        if (marvel.name === name && marvel.selected === false) {
-          marvel.selected = true;
-          this.setState({
-            marvels: marvelArray,
-            currentScore: this.state.currentScore + 1
-          })
-        }
+      this.setState({
+        currentScore: this.state.currentScore + 1,
+        selected: true
       });
     }
-  };
+
+    this.shuffle(marvels);
+  }
 
   render() {
     return (<div className="App">
@@ -43,14 +60,20 @@ class App extends Component {
         message={this.state.message}
         currentScore={this.state.currentScore}
         topScore={this.state.topScore}
-
       </Scores>
       <div className="container">
-        {
-          this.state.marvels.map((marvel) => <Characters id={marvel.id} character={marvel.name}/>
-           )
-         }
-        </div>
+        {this.state.marvels.map(marvel => (
+          <Tile>
+           key={marvels.id}
+           id={marvels.id}
+           name={marvels.name}
+           image={marvels.image}
+           clickTile={this.clickTile}
+           currentScore={this.state.currentScore}
+           </Tile>
+         ))
+       }
+      </div>
       <Footer/>
     </div>);
   }

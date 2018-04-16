@@ -1,5 +1,5 @@
 .header {
-  background-color: #BA122B;
+  background-color: #14225A;
   color: #FFFFFF;
   text-align: center;
   padding: 20px;
@@ -9,8 +9,4 @@
 
 .header-title {
   font-size: 50px;
-}
-
-.fa-star {
-  margin: 10px 20px;
 }

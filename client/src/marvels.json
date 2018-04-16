@@ -2,91 +2,91 @@
   {
     "id": 1,
     "name": "Amazing Spider-man",
-    "image": "./images/AmazingSpiderMan.jpg",
+    "image": "./images/apocalypse.jpg",
     "selected": false
   },
   {
     "id": 2,
-    "name": "Apocalypse",
-    "image": "./images/Apocalypse.jpg",
+    "name": "apocalypse",
+    "image": "./images/apocalypse.jpg",
     "selected": false
   },
   {
     "id": 3,
     "name": "Augustus Roman",
-    "image": "./images/Augustus-Roman.jpg",
+    "image": "./images/apocalypse.jpg",
     "selected": false
   },
   {
     "id": 4,
     "name": "Black Panther",
-    "image": "./images/Black-Panther.jpg",
+    "image": "./images/apocalypse.jpg",
     "selected": false
   },
   {
     "id": 5,
     "name": "Captain Marvel",
-    "image": "./images/Captain-Marvel.jpg",
+    "image": "./images/apocalypse.jpg",
     "selected": false
   },
   {
     "id": 6,
     "name": "Cyclops",
-    "image": "./images/Cyclops.jpg",
+    "image": "./images/apocalypse.jpg",
     "selected": false
   },
   {
     "id": 7,
     "name": "Madelyne Pryor",
-    "image": "./images/Madelyne-Pryor.jpg",
+    "image": "./images/apocalypse.jpg",
     "selected": false
   },
   {
     "id": 8,
     "name": "Mary Jane Watson",
-    "image": "./images/Mary-Jane-Watson.jpg",
+    "image": "./images/apocalypse.jpg",
     "selected": false
   },
   {
     "id": 9,
     "name": "Nova",
-    "image": "./images/Nova.jpg",
+    "image": "./images/apocalypse.jpg",
     "selected": false
   },
   {
     "id": 9,
     "name": "Reed Richards",
-    "image": "./images/Reed-Richards.jpg",
+    "image": "./images/apocalypse.jpg",
     "selected": false
   },
   {
     "id": 10,
     "name": "Runaways",
-    "image": "./images/Runaways.jpg",
+    "image": "./images/apocalypse.jpg",
     "selected": false
   },
   {
     "id": 11,
     "name": "She-Hulk",
-    "image": "./images/She-Hulk.jpg",
+    "image": "./images/apocalypse.jpg",
     "selected": false
   },
   {
     "id": 12,
     "name": "Star-Lord",
-    "image": "./images/Star-Lord.jpg",
+    "image": "./images/apocalypse.jpg",
     "selected": false
   },
   {
     "id": 13,
     "name": "Thanos",
-    "image": "./images/Thanos.jpg",
+    "image": "./images/apocalypse.jpg",
     "selected": false
   },
   {
     "id": 14,
     "name": "Wolverine",
-    "image": "./images/Wolverine.jpg",
+    "image": "./images/wolverine.jpg",
     "selected": false
   }
 ]
