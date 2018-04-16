@@ -2,6 +2,7 @@ import React from 'react';
 import './Tile.css';
 
 const Tile = props => (
+  // <div> {props.name} </div>
      <img
         alt={props.name}
         src={props.image}

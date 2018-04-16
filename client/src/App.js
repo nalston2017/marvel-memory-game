@@ -12,7 +12,7 @@ class App extends Component {
     topScore: 0,
     currentScore: 0,
     marvels: marvels,
-    selected: false,
+    unClickedMarvels: marvels,
     message: "Click on your favorite character to get started. Remember who you picked."
   };
 
@@ -20,7 +20,7 @@ class App extends Component {
   // Source: https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
   shuffle = a => {
     for (let i = a.length - 1; i > 0; i--) {
-      let j = Math.floor(Math.random() * (i + 1));
+      const j = Math.floor(Math.random() * (i + 1));
       [
         a[i], a[j]
       ] = [
@@ -30,24 +30,28 @@ class App extends Component {
   }
 
   //Onclick logic
-  clickTile = id =>{
-    const matchTile = this.state.selected.find(i => i.id === id);
+  clickTile = id => {
+    const matchTile = this.state.unClickedMarvels.find(i => i.id === id);
 
-    if (matchTile === true) {
+    if (matchTile === undefined) {
       this.setState({
         topScore: (this.state.currentScore > this.state.topScore)
           ? this.state.currectScore
           : this.state.topScore,
         currentScore: 0,
         marvels: marvels,
-        selected: false,
+        unClickedMarvels: marvels,
         message: "You have already picked that.Try again."
       });
     } else {
+      const updatedMarvels = this.state.unClickedMarvels.find(i => i.id === id);
+
       this.setState({
         currentScore: this.state.currentScore + 1,
-        selected: true
-      });
+        marvels: marvels,
+        unClickedMarvels: updatedMarvels,
+        message: "Excelsior!!"
+      })
     }
 
     this.shuffle(marvels);
@@ -56,26 +60,24 @@ class App extends Component {
   render() {
     return (<div className="App">
       <Header/>
-      <Scores>
-        message={this.state.message}
-        currentScore={this.state.currentScore}
-        topScore={this.state.topScore}
-      </Scores>
+      <Scores message={this.state.message} currentScore={this.state.currentScore} topScore={this.state.topScore}/>
       <div className="container">
-        {this.state.marvels.map(marvel => (
-          <Tile>
-           key={marvels.id}
-           id={marvels.id}
-           name={marvels.name}
-           image={marvels.image}
-           clickTile={this.clickTile}
-           currentScore={this.state.currentScore}
-           </Tile>
-         ))
-       }
+        {
+          this.state.marvels.map(marvel => (
+            <Tile
+            key={marvel.id}
+            id={marvel.id}
+            name={marvel.name}
+            image={marvel.image}
+            clickTile={this.clickTile}
+            currentScore={this.state.currentScore}
+            />
+          ))
+        }
       </div>
       <Footer/>
-    </div>);
+    </div>
+  );
   }
 }
 
