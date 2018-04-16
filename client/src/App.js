@@ -7,7 +7,9 @@ import Scores from "./components/Scores";
 
 class App extends Component {
   state = {
-    counter: 0,
+    currentScore: 0,
+    topScore: 0,
+    message: 'Click your favorite character to start.',
     marvels: [
       {
         id: 1,
@@ -77,7 +79,7 @@ class App extends Component {
     ]
   };
 
-  counterCheck = (name.selected) => {
+  counterCheck=(name,selectedState) => {
     let marvelArray = this.state.marvels;
     marvelArray.sort(function(a, b) {
       return 0.5 - Math.random()
@@ -85,14 +87,14 @@ class App extends Component {
 
     if (selectedState) {
       marvelArray.forEach(marvel => marvel.selected = false);
-      this.setState({marvel: marvelArray, counter: 0})
+      this.setState({marvel: marvelArray, currentScore: 0})
     } else {
       marvelArray.forEach((marvel) => {
         if (marvel.name === name && marvel.selected === false) {
           marvel.selected = true;
           this.setState({
             marvels: marvelArray,
-            counter: this.state.counter + 1
+            currentScore: this.state.currentScore + 1
           })
         }
       });
@@ -101,15 +103,23 @@ class App extends Component {
 
   render() {
     return (<div className="App">
-      <div className="App-header">
-        <img src={logo} className="App-logo" alt="logo"/>
-        <h2>Welcome to React</h2>
+      <Header/>
+      <Score>
+        message={this.state.message}
+        currentScore={this.state.currentScore}
+        topScore={this.state.topScore}
+
+      </Score>
+      <div className="container">
+        <div className="row"
+        {
+          this.state.marvels.map((marvel)
+             => <Characters id={marvel.id} character={marvel.name}/>
+           )
+         }
+        />
       </div>
-      <p className="App-intro">
-        To get started, edit
-        <code>src/App.js</code>
-        and save to reload.
-      </p>
+      <Footer/>
     </div>);
   }
 }
