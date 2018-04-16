@@ -2,7 +2,7 @@
   {
     "id": 1,
     "name": "Amazing Spider-man",
-    "image": "./images/Amazing_Spider-Man.jpg",
+    "image": "./images/Amazing-Spider-Man.jpg",
     "selected": false
   },
   {
@@ -14,19 +14,19 @@
   {
     "id": 3,
     "name": "Augustus Roman",
-    "image": "./images/Augustus_Roman.jpg",
+    "image": "./images/Augustus-Roman.jpg",
     "selected": false
   },
   {
     "id": 4,
     "name": "Black Panther",
-    "image": "./images/Black_Panther.jpg",
+    "image": "./images/Black-Panther.jpg",
     "selected": false
   },
   {
     "id": 5,
     "name": "Captain Marvel",
-    "image": "./images/Captain_Marvel.jpg",
+    "image": "./images/Captain-Marvel.jpg",
     "selected": false
   },
   {
@@ -38,13 +38,13 @@
   {
     "id": 7,
     "name": "Madelyne Pryor",
-    "image": "./images/Madelyne_Pryor.jpg",
+    "image": "./images/Madelyne-Pryor.jpg",
     "selected": false
   },
   {
     "id": 8,
     "name": "Mary Jane Watson",
-    "image": "./images/Mary_Jane_Watson.jpg",
+    "image": "./images/Mary-Jane-Watson.jpg",
     "selected": false
   },
   {
@@ -56,7 +56,7 @@
   {
     "id": 9,
     "name": "Reed Richards",
-    "image": "./images/Reed_Richards.jpg",
+    "image": "./images/Reed-Richards.jpg",
     "selected": false
   },
   {
@@ -85,12 +85,6 @@
   },
   {
     "id": 14,
-    "name": "Thanos",
-    "image": "./images/Thanos.jpg",
-    "selected": false
-  },
-  {
-    "id": 15,
     "name": "Wolverine",
     "image": "./images/Wolverine.jpg",
     "selected": false
