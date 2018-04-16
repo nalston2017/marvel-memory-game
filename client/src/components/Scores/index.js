@@ -1,2 +1,2 @@
 
-export { default } from './Score'
+export { default } from './Scores'

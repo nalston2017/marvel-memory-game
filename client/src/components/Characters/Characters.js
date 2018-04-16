@@ -1,14 +1,14 @@
 import React from 'react';
 import './Characters.css';
-import Image from "./Image";
+import Image from "../Images";
 
-class Character extends Component {
+class Character extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       id: this.props.id,
       name: this.props.character,
-      selected: this props.selected
+      selected: this.props.selected
     };
   }
 
@@ -17,7 +17,7 @@ class Character extends Component {
   }
 
   render() {
-    return (<div onCLick={() => thid.props.counterCheck(this.props.character, this.props.selected)} className={"col-3 mt-3"}>
+    return (<div onCLick={() => this.props.counterCheck(this.props.character, this.props.selected)} className={"col-3 mt-3"}>
       <Image imgSrc={this.props.character}/>
     </div>)
   }

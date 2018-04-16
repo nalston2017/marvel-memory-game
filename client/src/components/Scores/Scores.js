@@ -1,5 +1,5 @@
 import React from 'react';
-import './Score.css';
+import './Scores.css';
 
 const Score = props => (
   <div className="jumbotron text-center scoreboard">
