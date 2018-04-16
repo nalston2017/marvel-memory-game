@@ -88,5 +88,11 @@
     "name": "Wolverine",
     "image": "./images/wolverine.jpg",
     "selected": false
+  },
+  {
+    "id": 16,
+    "name": "Thanos",
+    "image": "./images/thanos.jpg",
+    "selected": false
   }
 ]
