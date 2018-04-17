@@ -18,7 +18,7 @@ class App extends Component {
 
   // Shuffle function
   // Source: https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
-  shuffle = (a) => {
+  shuffle = a => {
     for (let i = a.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [
@@ -30,19 +30,23 @@ class App extends Component {
   }
 
   //Onclick logic
-  clickTile = id => {
-    const matchTile = this.state.unClickedMarvels.find(i =>i.id === id);
+  clickTile = id =>{
+    console.log(id);
+    console.log("test", this.state.unClickedMarvels);
+    const matchTile = this.state.unClickedMarvels.find(i => i.id === id);
+
 
     if (matchTile === undefined) {
       this.setState({
-        topScore: (this.state.currentScore > this.state.topScore) ? this.state.currectScore : this.state.topScore,
+        topScore: (this.state.currentScore > this.state.topScore) ? this.state.currentScore : this.state.topScore,
         currentScore: 0,
         marvels: marvels,
         unClickedMarvels: marvels,
         message: "You have already picked that.Try again."
       })
     } else {
-      const updatedMarvels = this.state.unClickedMarvels.find(i => i.id === id);
+      const updatedMarvels = this.state.unClickedMarvels.filter(i => i.id !== id);
+      console.log(updatedMarvels);
 
       this.setState({
         currentScore: this.state.currentScore + 1,

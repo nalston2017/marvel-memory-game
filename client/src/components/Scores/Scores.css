@@ -6,7 +6,7 @@
   width: 80%;
   margin: 0 auto;
   text-align: center;
-  box-shadow: 3px 3px 10px rgb(161,168,173);
+  box-shadow: 3px 3px 3px 3px red;
 }
 
 .nav {
